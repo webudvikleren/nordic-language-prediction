@@ -3,17 +3,26 @@ import torch.nn as nn
 import torch.optim as optim
 from tqdm import tqdm
 from preprocessing import word_to_index, UNK
+import collections
 
 class CBOW(nn.Module):
-  def __init__(self, vocab_size, num_classes, embedding_dim, hidden_dim):
+  def __init__(self, vocab_size, num_classes, embedding_dim, hidden_dim, number_of_hidden_layers, activation_function):
     super(CBOW, self).__init__()
 
     self.embeddings = nn.Embedding(vocab_size, embedding_dim)
-    self.linear1 = nn.Linear(embedding_dim, hidden_dim)
-    self.activation_function1 = nn.ReLU()
+    self.number_of_hidden_layers = number_of_hidden_layers
 
-    self.linear2 = nn.Linear(hidden_dim, num_classes)
-    self.activation_function2 = nn.LogSoftmax()
+    print(activation_function)
+    for i in range(number_of_hidden_layers):
+      if i == 0:
+        setattr( self, f"linear{i}", nn.Linear(embedding_dim, hidden_dim) )
+        setattr(self, f"activation_function{i}", activation_function())
+      elif i == number_of_hidden_layers - 1:
+        setattr( self, f"linear{i}", nn.Linear(hidden_dim, num_classes) )
+        setattr(self, f"activation_function{i}", nn.LogSoftmax())
+      else:
+        setattr( self, f"linear{i}", nn.Linear(hidden_dim, hidden_dim) )
+        setattr(self, f"activation_function{i}", activation_function())
 
   def forward(self, sentence):
     indices = torch.tensor(
@@ -21,8 +30,7 @@ class CBOW(nn.Module):
       dtype=torch.long
     )
     embeds = sum(self.embeddings(indices)).view(1,-1)
-    out = self.linear1(embeds)
-    out = self.activation_function1(out)
-    out = self.linear2(out)
-    out = self.activation_function2(out)
+    for i in range(self.number_of_hidden_layers):
+      out = getattr(self, f"linear{i}")(embeds)
+      out = getattr(self, f"activation_function{i}")(out)
     return out

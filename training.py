@@ -30,29 +30,31 @@ def evaluate(model, sentences, languages):
     progress_bar.set_postfix(n_correct=n_correct)
   return n_correct / len(sentences)
 
-train_losses = []
-train_accuracies = []
-validation_accuracies = []
-cbow = CBOW(
-  vocab_size=len(vocab),
-  num_classes=len(language_set),
-  embedding_dim=10,
-  hidden_dim=64
-)
-
-for epoch in range(100):
-  train_losses.append(
-    train_epoch(
-      epoch,
-      cbow,
-      X_train,
-      y_train,
-      loss_function=nn.NLLLoss(),
-      optimizer=optim.SGD(cbow.parameters(), lr=0.01)
-    )
+def train(embedding_dimension, number_of_hidden_layers, hidden_layer_dimension, activation_function, number_of_training_epochs, loss_function_choice, optimizer_choice, learning_rate):
+  train_losses = []
+  train_accuracies = []
+  validation_accuracies = []
+  cbow = CBOW(
+    vocab_size=len(vocab),
+    num_classes=len(language_set),
+    embedding_dim=embedding_dimension,
+    hidden_dim=hidden_layer_dimension,
+    number_of_hidden_layers=number_of_hidden_layers,
+    activation_function=activation_function
   )
-  train_accuracies.append(evaluate(cbow, X_train, y_train))
-  validation_accuracies.append(evaluate(cbow, X_validation, y_validation))
 
-#print(evaluate(cbow, X_test, y_test))
-print(evaluate(cbow, X_train, y_train))
+  for epoch in range(number_of_training_epochs):
+    train_losses.append(
+      train_epoch(
+        epoch,
+        cbow,
+        X_train,
+        y_train,
+        loss_function=loss_function_choice(),
+        optimizer=optimizer_choice(cbow.parameters(), lr=learning_rate)
+      )
+    )
+    train_accuracies.append(evaluate(cbow, X_train, y_train))
+    validation_accuracies.append(evaluate(cbow, X_validation, y_validation))
+
+  return evaluate(cbow, X_validation, y_validation)
