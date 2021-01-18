@@ -12,13 +12,12 @@ class CBOW(nn.Module):
     self.embeddings = nn.Embedding(vocab_size, embedding_dim)
     self.number_of_hidden_layers = number_of_hidden_layers
 
-    print(activation_function)
-    for i in range(number_of_hidden_layers):
-      if i == 0:
-        setattr( self, f"linear{i}", nn.Linear(embedding_dim, hidden_dim) )
+    for i in range(1,number_of_hidden_layers+1):
+      if i == 1:
+        setattr(self, f"linear{i}", nn.Linear(embedding_dim, hidden_dim) )
         setattr(self, f"activation_function{i}", activation_function())
-      elif i == number_of_hidden_layers - 1:
-        setattr( self, f"linear{i}", nn.Linear(hidden_dim, num_classes) )
+      elif i == number_of_hidden_layers:
+        setattr(self, f"linear{i}", nn.Linear(hidden_dim, num_classes) )
         setattr(self, f"activation_function{i}", nn.LogSoftmax())
       else:
         setattr( self, f"linear{i}", nn.Linear(hidden_dim, hidden_dim) )
@@ -30,7 +29,11 @@ class CBOW(nn.Module):
       dtype=torch.long
     )
     embeds = sum(self.embeddings(indices)).view(1,-1)
-    for i in range(self.number_of_hidden_layers):
-      out = getattr(self, f"linear{i}")(embeds)
+    out = None
+    for i in range(1, self.number_of_hidden_layers + 1):
+      if i == 1:
+        out = getattr(self, f"linear{i}")(embeds)
+      else:
+        out = getattr(self, f"linear{i}")(out)
       out = getattr(self, f"activation_function{i}")(out)
     return out

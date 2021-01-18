@@ -1,13 +1,13 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-df = pd.read_csv("NordicDSL/data/wikipedia/train.csv")
+df = pd.read_csv("../NordicDSL/data/wikipedia/train.csv")
 
 X = df["sentence"].values
 y = df["language"].values
 
 X_train, X_validation, y_train, y_validation = train_test_split(X, y, train_size=0.01, test_size=0.001)
-df = pd.read_csv("NordicDSL/data/wikipedia/test.csv")
+df = pd.read_csv("../NordicDSL/data/wikipedia/test.csv")
 X_test = df["sentence"].values
 y_test = df["language"].values
 

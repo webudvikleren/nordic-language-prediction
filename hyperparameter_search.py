@@ -28,10 +28,18 @@ def hyperparameter_search( number_of_combinations ):
       "optimizer_choice": choice(optimizer_choice),
       "learning_rate": choice(learning_rate)
     }
-
+    print("Searching with following params:s")
+    print(params)
     validation_accuracy = train(**params)
+    print("")
     params_results.append(( params, validation_accuracy ))
 
+  params_results.sort(key=lambda x: x[1])
+  print("Best found params:")
+  print(params_results[0][0])
+  print("")
+  print("Accuracy on best found params")
+  print(params_results[0][1])
+  print("")
+    
   return params_results
-
-print(hyperparameter_search(2))
