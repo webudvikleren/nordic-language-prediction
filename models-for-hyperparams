@@ -1,202 +1,364 @@
-C:\Users\Sebastian\Anaconda3\python.exe C:/Users/Sebastian/Desktop/something/nordic-language-prediction-master/main.py
-0
-Searching with following params:s
-{'embedding_dimension': 16, 'number_of_hidden_layers': 16, 'hidden_layer_dimension': 64, 'activation_function': <class 'torch.nn.modules.activation.Sigmoid'>, 'number_of_training_epochs': 5, 'loss_function_choice': <class 'torch.nn.modules.loss.CrossEntropyLoss'>, 'optimizer_choice': <class 'torch.optim.adam.Adam'>, 'learning_rate': 0.001}
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=5]Training accuracy: 0.1919873959036687
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1312.26 sentences/s, n_correct=99]
-Evaluating:   0%|          | 0/23385 [00:00<?, ? sentences/s, n_correct=6]Validation accuracy: 0.22247191011235956
-Evaluating: 100%|██████████| 23385/23385 [00:19<00:00, 1218.30 sentences/s, n_correct=4658]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=4]Test accuracy: 0.19918751336326704
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1323.97 sentences/s, n_correct=99]
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.16250281341435965
+Validation accuracy: 0.12808988764044943
+Test accuracy: 0.15471456061577935
 
-1
-Searching with following params:s
-{'embedding_dimension': 64, 'number_of_hidden_layers': 12, 'hidden_layer_dimension': 64, 'activation_function': <class 'torch.nn.modules.activation.Tanh'>, 'number_of_training_epochs': 20, 'loss_function_choice': <class 'torch.nn.modules.loss.L1Loss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 1.0}
-Epoch 0:
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.9392302498311952
+Validation accuracy: 0.6831460674157304
+Test accuracy: 0.656617489843917
 
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=7]Training accuracy: 0.17128066621652036
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1507.65 sentences/s, n_correct=68]
-Evaluating:   0%|          | 0/23385 [00:00<?, ? sentences/s, n_correct=9]Validation accuracy: 0.15280898876404495
-Evaluating: 100%|██████████| 23385/23385 [00:16<00:00, 1444.59 sentences/s, n_correct=3615]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=6]Test accuracy: 0.15458627325208468
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1398.77 sentences/s, n_correct=68]
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.149898717083052
+Validation accuracy: 0.1707865168539326
+Test accuracy: 0.15035279025016035
 
-2
-Searching with following params:s
-{'embedding_dimension': 64, 'number_of_hidden_layers': 3, 'hidden_layer_dimension': 64, 'activation_function': <class 'torch.nn.modules.activation.Tanh'>, 'number_of_training_epochs': 5, 'loss_function_choice': <class 'torch.nn.modules.loss.CrossEntropyLoss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.001}
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.3270312851676795
+Validation accuracy: 0.2943820224719101
+Test accuracy: 0.31468890314304043
 
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=32]Training accuracy: 0.6599144722034661
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 2818.68 sentences/s, n_correct=231]
-Evaluating:   0%|          | 0/23385 [00:00<?, ? sentences/s, n_correct=36]Validation accuracy: 0.5191011235955056
-Evaluating: 100%|██████████| 23385/23385 [00:08<00:00, 2775.29 sentences/s, n_correct=12101]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=29]Test accuracy: 0.5174684626897584
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 2793.15 sentences/s, n_correct=231]
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.15980193562907946
+Validation accuracy: 0.16404494382022472
+Test accuracy: 0.160786829163994
 
-3
-Searching with following params:s
-{'embedding_dimension': 64, 'number_of_hidden_layers': 9, 'hidden_layer_dimension': 128, 'activation_function': <class 'torch.nn.modules.activation.ReLU'>, 'number_of_training_epochs': 10, 'loss_function_choice': <class 'torch.nn.modules.loss.L1Loss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 1.0}
-Epoch 0:
-Evaluating: 100%|██████████| 4443/4443 [00:04<00:00, 987.09 sentences/s, n_correct=797]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=5]Training accuracy: 0.17938329957236102
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1049.50 sentences/s, n_correct=63]
-Evaluating:   0%|          | 0/23385 [00:00<?, ? sentences/s, n_correct=1]Validation accuracy: 0.14157303370786517
-Evaluating: 100%|██████████| 23385/23385 [00:20<00:00, 1130.98 sentences/s, n_correct=3968]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=5]Test accuracy: 0.16968141971349154
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1180.36 sentences/s, n_correct=63]
-Epoch 0:   0%|          | 0/4443 [00:00<?, ? sentences/s, loss=239]
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.7006527121314428
+Validation accuracy: 0.48764044943820223
+Test accuracy: 0.510498182595681
 
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.16250281341435965
+Validation accuracy: 0.12808988764044943
+Test accuracy: 0.15471456061577935
 
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.16250281341435965
+Validation accuracy: 0.12808988764044943
+Test accuracy: 0.15471456061577935
 
-4
-Searching with following params:s
-{'embedding_dimension': 16, 'number_of_hidden_layers': 14, 'hidden_layer_dimension': 2, 'activation_function': <class 'torch.nn.modules.activation.Sigmoid'>, 'number_of_training_epochs': 10, 'loss_function_choice': <class 'torch.nn.modules.loss.NLLLoss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.001}
-Epoch 0: 
-Evaluating:   5%|▍         | 22/445 [00:00<00:01, 215.02 sentences/s, n_correct=9]Training accuracy: 0.19896466351564257
-Evaluating: 100%|██████████| 445/445 [00:02<00:00, 202.89 sentences/s, n_correct=76]
-Evaluating:   0%|          | 18/23385 [00:00<02:13, 175.04 sentences/s, n_correct=6]Validation accuracy: 0.1707865168539326
-Evaluating: 100%|██████████| 23385/23385 [01:54<00:00, 205.11 sentences/s, n_correct=4658]
-Evaluating:   5%|▌         | 23/445 [00:00<00:01, 223.28 sentences/s, n_correct=10]Test accuracy: 0.19918751336326704
-Evaluating: 100%|██████████| 445/445 [00:02<00:00, 209.80 sentences/s, n_correct=76]
-Epoch 0:   0%|          | 17/4443 [00:00<00:26, 167.52 sentences/s, loss=49.1]
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.8863380598694576
+Validation accuracy: 0.42247191011235957
+Test accuracy: 0.4242463117382938
 
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.9806437092054918
+Validation accuracy: 0.6112359550561798
+Test accuracy: 0.6129570237331623
 
-5
-Searching with following params:s
-{'embedding_dimension': 128, 'number_of_hidden_layers': 3, 'hidden_layer_dimension': 2, 'activation_function': <class 'torch.nn.modules.activation.Sigmoid'>, 'number_of_training_epochs': 20, 'loss_function_choice': <class 'torch.nn.modules.loss.CrossEntropyLoss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.001}
-Epoch 0:
-Evaluating:  10%|▉         | 43/445 [00:00<00:00, 422.43 sentences/s, n_correct=17]Training accuracy: 0.3463875759621877
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 341.33 sentences/s, n_correct=120]
-Evaluating:   0%|          | 34/23385 [00:00<01:10, 331.53 sentences/s, n_correct=26]Validation accuracy: 0.2696629213483146
-Evaluating: 100%|██████████| 23385/23385 [01:06<00:00, 351.93 sentences/s, n_correct=7152]
-Evaluating:   7%|▋         | 32/445 [00:00<00:01, 315.15 sentences/s, n_correct=16]Test accuracy: 0.30583707504810775
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 312.38 sentences/s, n_correct=120]
-Epoch 0:   0%|          | 0/4443 [00:00<?, ? sentences/s]/usr/local/lib/python3.6/dist-packages/torch/nn/modules/loss.py:94: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 6])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return F.l1_loss(input, target, reduction=self.reduction)
-Epoch 0:   0%|          | 3/4443 [00:00<02:34, 28.72 sentences/s, loss=30.5]
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.6686923250056268
+Validation accuracy: 0.449438202247191
+Test accuracy: 0.48355783621979903
 
-6
-Searching with following params:s
-{'embedding_dimension': 2, 'number_of_hidden_layers': 12, 'hidden_layer_dimension': 64, 'activation_function': <class 'torch.nn.modules.activation.ReLU'>, 'number_of_training_epochs': 5, 'loss_function_choice': <class 'torch.nn.modules.loss.L1Loss'>, 'optimizer_choice': <class 'torch.optim.adam.Adam'>, 'learning_rate': 0.01}
-Epoch 0: 
-Evaluating:   5%|▌         | 24/445 [00:00<00:01, 237.72 sentences/s, n_correct=4]Training accuracy: 0.1480981318928652
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 231.69 sentences/s, n_correct=58]
-Evaluating:   0%|          | 24/23385 [00:00<01:39, 233.73 sentences/s, n_correct=4]Validation accuracy: 0.1303370786516854
-Evaluating: 100%|██████████| 23385/23385 [01:45<00:00, 222.03 sentences/s, n_correct=3590]
-Evaluating:   5%|▌         | 24/445 [00:00<00:01, 230.07 sentences/s, n_correct=3]Test accuracy: 0.15351721188796236
-Evaluating: 100%|██████████| 445/445 [00:02<00:00, 209.69 sentences/s, n_correct=58]
-Epoch 0:   0%|          | 14/4443 [00:00<00:32, 136.29 sentences/s, loss=99]  
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.1906369570110286
+Validation accuracy: 0.19101123595505617
+Test accuracy: 0.19918751336326704
 
-7
-{'embedding_dimension': 128, 'number_of_hidden_layers': 2, 'hidden_layer_dimension': 16, 'activation_function': <class 'torch.nn.modules.activation.Tanh'>, 'number_of_training_epochs': 10, 'loss_function_choice': <class 'torch.nn.modules.loss.L1Loss'>, 'optimizer_choice': <class 'torch.optim.adam.Adam'>, 'learning_rate': 0.01}
-Epoch 0: 
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=6]Training accuracy: 0.14179608372721134
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 3104.58 sentences/s, n_correct=64]
-Evaluating:   0%|          | 0/23385 [00:00<?, ? sentences/s, n_correct=11]Validation accuracy: 0.14382022471910114
-Evaluating: 100%|██████████| 23385/23385 [00:08<00:00, 2846.96 sentences/s, n_correct=3355]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=6]Test accuracy: 0.14346803506521275
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 3051.51 sentences/s, n_correct=64]
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.5696601395453522
+Validation accuracy: 0.5573033707865168
+Test accuracy: 0.5769937994440881
 
-8
-Epoch 0:   0%|          | 0/4443 [00:00<?, ? sentences/s]0
-Searching with following params:s
-{'embedding_dimension': 128, 'number_of_hidden_layers': 11, 'hidden_layer_dimension': 2, 'activation_function': <class 'torch.nn.modules.activation.ReLU'>, 'number_of_training_epochs': 10, 'loss_function_choice': <class 'torch.nn.modules.loss.CrossEntropyLoss'>, 'optimizer_choice': <class 'torch.optim.adam.Adam'>, 'learning_rate': 0.001}
-/usr/local/lib/python3.6/dist-packages/ipykernel_launcher.py:37: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
-Epoch 0: 
-Evaluating:   7%|▋         | 29/445 [00:00<00:01, 289.67 sentences/s, n_correct=14]Training accuracy: 0.204366419086203
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 269.47 sentences/s, n_correct=92]
-Evaluating:   0%|          | 31/23385 [00:00<01:17, 302.70 sentences/s, n_correct=18]Validation accuracy: 0.20674157303370785
-Evaluating: 100%|██████████| 23385/23385 [01:25<00:00, 273.90 sentences/s, n_correct=4658]
-Evaluating:   6%|▋         | 28/445 [00:00<00:01, 273.08 sentences/s, n_correct=13]Test accuracy: 0.19918751336326704
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 256.30 sentences/s, n_correct=92]
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.1359441818591042
+Validation accuracy: 0.13707865168539327
+Test accuracy: 0.1506093649775497
 
-9
-Searching with following params:s
-{'embedding_dimension': 128, 'number_of_hidden_layers': 7, 'hidden_layer_dimension': 2, 'activation_function': <class 'torch.nn.modules.activation.ReLU'>, 'number_of_training_epochs': 5, 'loss_function_choice': <class 'torch.nn.modules.loss.L1Loss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.001}
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.9984244879585865
+Validation accuracy: 0.7662921348314606
+Test accuracy: 0.7757536882617062
 
-Evaluating:   7%|▋         | 30/445 [00:00<00:01, 295.87 sentences/s, n_correct=8]Training accuracy: 0.19153724960612198
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 309.55 sentences/s, n_correct=93]
-Evaluating:   0%|          | 34/23385 [00:00<01:08, 339.28 sentences/s, n_correct=14]Validation accuracy: 0.20898876404494382
-Evaluating: 100%|██████████| 23385/23385 [01:15<00:00, 309.31 sentences/s, n_correct=4712]
-Evaluating:   7%|▋         | 33/445 [00:00<00:01, 328.86 sentences/s, n_correct=9]Test accuracy: 0.2014966859097712
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 320.99 sentences/s, n_correct=93]
-Epoch 0:   0%|          | 8/4443 [00:00<00:55, 79.41 sentences/s, loss=21.4]
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.17083051991897366
+Validation accuracy: 0.18202247191011237
+Test accuracy: 0.17660893735300406
 
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.16632905694350664
+Validation accuracy: 0.1707865168539326
+Test accuracy: 0.16681633525764378
 
-10
-{'embedding_dimension': 16, 'number_of_hidden_layers': 14, 'hidden_layer_dimension': 2, 'activation_function': <class 'torch.nn.modules.activation.Sigmoid'>, 'number_of_training_epochs': 10, 'loss_function_choice': <class 'torch.nn.modules.loss.NLLLoss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.001}
-Epoch 0: 
-Evaluating:   5%|▍         | 22/445 [00:00<00:01, 215.02 sentences/s, n_correct=9]Training accuracy: 0.19896466351564257
-Evaluating: 100%|██████████| 445/445 [00:02<00:00, 202.89 sentences/s, n_correct=76]
-Evaluating:   0%|          | 18/23385 [00:00<02:13, 175.04 sentences/s, n_correct=6]Validation accuracy: 0.1707865168539326
-Evaluating: 100%|██████████| 23385/23385 [01:54<00:00, 205.11 sentences/s, n_correct=4658]
-Evaluating:   5%|▌         | 23/445 [00:00<00:01, 223.28 sentences/s, n_correct=10]Test accuracy: 0.19918751336326704
-Evaluating: 100%|██████████| 445/445 [00:02<00:00, 209.80 sentences/s, n_correct=76]
-Epoch 0:   0%|          | 17/4443 [00:00<00:26, 167.52 sentences/s, loss=49.1]
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.1674544226873734
+Validation accuracy: 0.1797752808988764
+Test accuracy: 0.16536241180243746
 
-11
-Searching with following params:s
-{'embedding_dimension': 128, 'number_of_hidden_layers': 3, 'hidden_layer_dimension': 2, 'activation_function': <class 'torch.nn.modules.activation.Sigmoid'>, 'number_of_training_epochs': 20, 'loss_function_choice': <class 'torch.nn.modules.loss.CrossEntropyLoss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.001}
-Epoch 0: 
-Evaluating:  10%|▉         | 43/445 [00:00<00:00, 422.43 sentences/s, n_correct=17]Training accuracy: 0.3463875759621877
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 341.33 sentences/s, n_correct=120]
-Evaluating:   0%|          | 34/23385 [00:00<01:10, 331.53 sentences/s, n_correct=26]Validation accuracy: 0.2696629213483146
-Evaluating: 100%|██████████| 23385/23385 [01:06<00:00, 351.93 sentences/s, n_correct=7152]
-Evaluating:   7%|▋         | 32/445 [00:00<00:01, 315.15 sentences/s, n_correct=16]Test accuracy: 0.30583707504810775
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 312.38 sentences/s, n_correct=120]
-Epoch 0:   0%|          | 0/4443 [00:00<?, ? sentences/s]/usr/local/lib/python3.6/dist-packages/torch/nn/modules/loss.py:94: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 6])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
-  return F.l1_loss(input, target, reduction=self.reduction)
-Epoch 0:   0%|          | 3/4443 [00:00<02:34, 28.72 sentences/s, loss=30.5]
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.5878910645959937
+Validation accuracy: 0.5730337078651685
+Test accuracy: 0.549326491340603
 
-12
-Searching with following params:s
-{'embedding_dimension': 2, 'number_of_hidden_layers': 12, 'hidden_layer_dimension': 64, 'activation_function': <class 'torch.nn.modules.activation.ReLU'>, 'number_of_training_epochs': 5, 'loss_function_choice': <class 'torch.nn.modules.loss.L1Loss'>, 'optimizer_choice': <class 'torch.optim.adam.Adam'>, 'learning_rate': 0.01}
-Epoch 0:
-Evaluating:   5%|▌         | 24/445 [00:00<00:01, 237.72 sentences/s, n_correct=4]Training accuracy: 0.1480981318928652
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 231.69 sentences/s, n_correct=58]
-Evaluating:   0%|          | 24/23385 [00:00<01:39, 233.73 sentences/s, n_correct=4]Validation accuracy: 0.1303370786516854
-Evaluating: 100%|██████████| 23385/23385 [01:45<00:00, 222.03 sentences/s, n_correct=3590]
-Evaluating:   5%|▌         | 24/445 [00:00<00:01, 230.07 sentences/s, n_correct=3]Test accuracy: 0.15351721188796236
-Evaluating: 100%|██████████| 445/445 [00:02<00:00, 209.69 sentences/s, n_correct=58]
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.36191762322754895
+Validation accuracy: 0.3258426966292135
+Test accuracy: 0.3544152234338251
 
-13
-Searching with following params:s
-{'embedding_dimension': 2, 'number_of_hidden_layers': 10, 'hidden_layer_dimension': 16, 'activation_function': <class 'torch.nn.modules.activation.ReLU'>, 'number_of_training_epochs': 10, 'loss_function_choice': <class 'torch.nn.modules.loss.CrossEntropyLoss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.01}
-Epoch 0: 
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=17]Training accuracy: 0.41818591042088676
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1605.45 sentences/s, n_correct=171]
-Evaluating:   0%|          | 0/23385 [00:00<?, ? sentences/s, n_correct=11]Validation accuracy: 0.3842696629213483
-Evaluating: 100%|██████████| 23385/23385 [00:14<00:00, 1572.62 sentences/s, n_correct=8472]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=14]Test accuracy: 0.3622835150737652
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1625.98 sentences/s, n_correct=171]
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.15372496061219895
+Validation accuracy: 0.15955056179775282
+Test accuracy: 0.16467821252939918
 
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.17825793382849425
+Validation accuracy: 0.1842696629213483
+Test accuracy: 0.192473807996579
 
-14
-{'embedding_dimension': 2, 'number_of_hidden_layers': 7, 'hidden_layer_dimension': 128, 'activation_function': <class 'torch.nn.modules.activation.Sigmoid'>, 'number_of_training_epochs': 20, 'loss_function_choice': <class 'torch.nn.modules.loss.L1Loss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.001}
-Evaluating:   6%|▌         | 25/445 [00:00<00:01, 242.28 sentences/s, n_correct=13]Training accuracy: 0.24352914697276615
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 247.38 sentences/s, n_correct=113]
-Evaluating:   0%|          | 29/23385 [00:00<01:21, 285.77 sentences/s, n_correct=19]Validation accuracy: 0.2539325842696629
-Evaluating: 100%|██████████| 23385/23385 [01:29<00:00, 262.04 sentences/s, n_correct=6121]
-Evaluating:   6%|▋         | 28/445 [00:00<00:01, 270.53 sentences/s, n_correct=13]Test accuracy: 0.2617489843917041
-Evaluating: 100%|██████████| 445/445 [00:01<00:00, 247.07 sentences/s, n_correct=113]
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.15237452171955887
+Validation accuracy: 0.17303370786516853
+Test accuracy: 0.15509942270686336
 
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.15237452171955887
+Validation accuracy: 0.17303370786516853
+Test accuracy: 0.15509942270686336
 
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.20571685797884312
+Validation accuracy: 0.18651685393258427
+Test accuracy: 0.19918751336326704
 
-15
-{'embedding_dimension': 64, 'number_of_hidden_layers': 5, 'hidden_layer_dimension': 64, 'activation_function': <class 'torch.nn.modules.activation.ReLU'>, 'number_of_training_epochs': 5, 'loss_function_choice': <class 'torch.nn.modules.loss.CrossEntropyLoss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.001}
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=23]Training accuracy: 0.6776952509565609
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 2189.25 sentences/s, n_correct=229]
-Evaluating:   0%|          | 0/23385 [00:00<?, ? sentences/s, n_correct=28]Validation accuracy: 0.5146067415730337
-Evaluating: 100%|██████████| 23385/23385 [00:11<00:00, 2110.40 sentences/s, n_correct=12155]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=24]Test accuracy: 0.5197776352362625
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1916.16 sentences/s, n_correct=229]
-Epoch 0:   0%|          | 0/4443 [00:00<?, ? sentences/s, loss=8.38]
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.21156875984695026
+Validation accuracy: 0.21123595505617979
+Test accuracy: 0.19918751336326704
 
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.1674544226873734
+Validation accuracy: 0.15280898876404495
+Test accuracy: 0.16536241180243746
 
-16
-{'embedding_dimension': 16, 'number_of_hidden_layers': 10, 'hidden_layer_dimension': 16, 'activation_function': <class 'torch.nn.modules.activation.ReLU'>, 'number_of_training_epochs': 5, 'loss_function_choice': <class 'torch.nn.modules.loss.CrossEntropyLoss'>, 'optimizer_choice': <class 'torch.optim.sgd.SGD'>, 'learning_rate': 0.01}
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=6]Training accuracy: 0.17128066621652036
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1591.14 sentences/s, n_correct=76]
-Evaluating:   0%|          | 0/23385 [00:00<?, ? sentences/s, n_correct=9]Validation accuracy: 0.1707865168539326
-Evaluating: 100%|██████████| 23385/23385 [00:15<00:00, 1490.34 sentences/s, n_correct=4130]
-Evaluating:   0%|          | 0/445 [00:00<?, ? sentences/s, n_correct=3]Test accuracy: 0.17660893735300406
-Evaluating: 100%|██████████| 445/445 [00:00<00:00, 1439.46 sentences/s, n_correct=76]
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.1568759846950259
+Validation accuracy: 0.1303370786516854
+Test accuracy: 0.1394483643361129
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.3520144046815215
+Validation accuracy: 0.3303370786516854
+Test accuracy: 0.3450930083386786
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.5626828719333784
+Validation accuracy: 0.4
+Test accuracy: 0.42163780200983536
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.5539050191312176
+Validation accuracy: 0.2853932584269663
+Test accuracy: 0.2921530895873423
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.19311276164753544
+Validation accuracy: 0.2157303370786517
+Test accuracy: 0.19918751336326704
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.545802385775377
+Validation accuracy: 0.5235955056179775
+Test accuracy: 0.5203335471456062
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.21156875984695026
+Validation accuracy: 0.21123595505617979
+Test accuracy: 0.19918751336326704
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.16317803286067972
+Validation accuracy: 0.1662921348314607
+Test accuracy: 0.1732307034423776
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.9477830294845825
+Validation accuracy: 0.7415730337078652
+Test accuracy: 0.7283728886038059
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.6702678370470403
+Validation accuracy: 0.6359550561797753
+Test accuracy: 0.5989309386358777
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.33085752869682644
+Validation accuracy: 0.2539325842696629
+Test accuracy: 0.24981825956809922
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 1.0
+Validation accuracy: 0.750561797752809
+Test accuracy: 0.7147744280521702
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.37069547602970965
+Validation accuracy: 0.35280898876404493
+Test accuracy: 0.34842847979474023
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.19311276164753544
+Validation accuracy: 0.2157303370786517
+Test accuracy: 0.19918751336326704
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.14629754670267836
+Validation accuracy: 0.12134831460674157
+Test accuracy: 0.14274107333760958
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.20346612649110962
+Validation accuracy: 0.1707865168539326
+Test accuracy: 0.19918751336326704
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.16340310600945307
+Validation accuracy: 0.1348314606741573
+Test accuracy: 0.15351721188796236
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.8210668467251857
+Validation accuracy: 0.6
+Test accuracy: 0.5917896087235407
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.45959936979518345
+Validation accuracy: 0.3752808988764045
+Test accuracy: 0.40350652127432113
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.7431915372496061
+Validation accuracy: 0.550561797752809
+Test accuracy: 0.5439384220654265
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.36461850101282917
+Validation accuracy: 0.2943820224719101
+Test accuracy: 0.3465041693393201
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.20706729687148323
+Validation accuracy: 0.1797752808988764
+Test accuracy: 0.19918751336326704
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.1744316902993473
+Validation accuracy: 0.18876404494382024
+Test accuracy: 0.1851186658114176
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.233175782129192
+Validation accuracy: 0.2157303370786517
+Test accuracy: 0.2127432114603378
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.22079675894665765
+Validation accuracy: 0.24719101123595505
+Test accuracy: 0.2521701945691683
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.9588116137744767
+Validation accuracy: 0.7685393258426966
+Test accuracy: 0.7589480436177036
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.6603646185010128
+Validation accuracy: 0.6606741573033708
+Test accuracy: 0.6599957237545435
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.1937879810938555
+Validation accuracy: 0.2202247191011236
+Test accuracy: 0.17134915544152235
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.16767949583614675
+Validation accuracy: 0.1797752808988764
+Test accuracy: 0.15685268334402394
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.15935178933153274
+Validation accuracy: 0.15280898876404495
+Test accuracy: 0.15351721188796236
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.6695926176007202
+Validation accuracy: 0.5752808988764045
+Test accuracy: 0.6149240966431473
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.1429214494710781
+Validation accuracy: 0.16179775280898875
+Test accuracy: 0.15471456061577935
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.16070222822417285
+Validation accuracy: 0.15056179775280898
+Test accuracy: 0.15509942270686336
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.1692550078775602
+Validation accuracy: 0.15280898876404495
+Test accuracy: 0.14085952533675433
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.3576412334008553
+Validation accuracy: 0.3415730337078652
+Test accuracy: 0.35736583279880263
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.7497186585640333
+Validation accuracy: 0.5191011235955056
+Test accuracy: 0.5432542227923883
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.7602970965563808
+Validation accuracy: 0.48764044943820223
+Test accuracy: 0.4718409236690186
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.6866981769074949
+Validation accuracy: 0.6426966292134831
+Test accuracy: 0.6329698524695317
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.6689173981544002
+Validation accuracy: 0.5707865168539326
+Test accuracy: 0.5720333547145606
+
+{embedding_dimension: 32, number_of_hidden_layers: 5, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 10, loss_function_choice: <class torch.nn.modules.loss.NLLLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.7560207067296871
+Validation accuracy: 0.6898876404494382
+Test accuracy: 0.6924524267692965
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.01}
+Training accuracy: 0.16948008102633355
+Validation accuracy: 0.1797752808988764
+Test accuracy: 0.17660893735300406
+
+{embedding_dimension: 32, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.14224623002475806
+Validation accuracy: 0.14831460674157304
+Test accuracy: 0.14453709642933504
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.ReLU>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.01}
+Training accuracy: 0.1784830069772676
+Validation accuracy: 0.1797752808988764
+Test accuracy: 0.1941415437246098
+
+{embedding_dimension: 64, number_of_hidden_layers: 5, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Tanh>, number_of_training_epochs: 5, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.13166779203241052
+Validation accuracy: 0.1146067415730337
+Test accuracy: 0.12837288860380586
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 32, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.L1Loss>, optimizer_choice: <class torch.optim.sgd.SGD>, learning_rate: 0.001}
+Training accuracy: 0.1661039837947333
+Validation accuracy: 0.15280898876404495
+Test accuracy: 0.16536241180243746
+
+{embedding_dimension: 64, number_of_hidden_layers: 10, hidden_layer_dimension: 64, activation_function: <class torch.nn.modules.activation.Sigmoid>, number_of_training_epochs: 20, loss_function_choice: <class torch.nn.modules.loss.CrossEntropyLoss>, optimizer_choice: <class torch.optim.adam.Adam>, learning_rate: 0.001}
+Training accuracy: 0.8406482106684673
+Validation accuracy: 0.6651685393258427
+Test accuracy: 0.6646140688475518
