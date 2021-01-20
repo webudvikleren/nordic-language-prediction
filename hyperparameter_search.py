@@ -4,6 +4,8 @@ from numpy.random import choice
 from training import train
 
 def hyperparameter_search( number_of_combinations ):
+  
+  # Defining domain
   embedding_dimension = [ 32, 64 ]
   number_of_hidden_layers = [ 5, 10 ]
   hidden_layer_dimension = [ 32, 64 ]
@@ -15,9 +17,8 @@ def hyperparameter_search( number_of_combinations ):
 
   params_results = []
 
-  #TODO - Memorize each choice of params, so no combination is selected more than once
-
   for i in range(number_of_combinations):
+    # Choosing combination randomly
     params = {
       "embedding_dimension": choice(embedding_dimension),
       "number_of_hidden_layers": choice(number_of_hidden_layers),
@@ -33,21 +34,28 @@ def hyperparameter_search( number_of_combinations ):
 
     f = open("hyperparameters_data.txt", "a")
     try:
+      # Training on selected combination of parameters
       train_accuracy, validation_accuracy, test_accuracy, train_accuracies, validation_accuracies = train(**params)
       print("")
+
+      # Save selected parameters and achieved validation accuracy
       params_results.append(( params, validation_accuracy ))
 
+      # Writing to file to save results
       f.write(f"Params: {params}\n")
       f.write(f"Train accuracy: {train_accuracy}\n")
       f.write(f"Validation accuracy: {validation_accuracy}\n")
       f.write(f"Test accuracy: {test_accuracy}\n")
       f.write("\n")
     except Exception as e:
+
+      # If exception occurs during training, save it in the file rather than stopping the search
       f.write(f"Exception with params: {params}\n")
       f.write(f"{e}")
       f.write("\n")
     f.close()    
 
+  # Sort the selected parameters by achieved validation accuracy
   params_results.sort(key=lambda x: x[1], reverse=True)
   print("Best found params:")
   print(params_results[0][0])

@@ -10,9 +10,12 @@ class Seq2Vec(nn.Module):
     super(Seq2Vec, self).__init__()
 
     self.embeddings = nn.Embedding(vocab_size, embedding_dim)
+
+    #Set recurrent layer
     self.rnn = RNN_layer(input_size=embedding_dim, hidden_size=hidden_dim)
     self.number_of_hidden_layers = number_of_hidden_layers
 
+    #Dynamically set hidden layers, with given activation function
     for i in range(1,number_of_hidden_layers+1):
       if i == 1:
         setattr(self, f"linear{i}", nn.Linear(embedding_dim, hidden_dim) )
@@ -29,10 +32,13 @@ class Seq2Vec(nn.Module):
       [word_to_index.get(word, UNK) for word in sentence],
       dtype=torch.long
     )
+
+    #Calculate result of recurrent layer
     embeds = self.embeddings(indices).unsqueeze(1)
     embeds, _ = self.rnn(embeds)
     embeds = sum(embeds)
 
+    #Dynamically calculating predictions
     out = None
     for i in range(1, self.number_of_hidden_layers + 1):
       if i == 1:

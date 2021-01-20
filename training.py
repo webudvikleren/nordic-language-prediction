@@ -35,6 +35,8 @@ def train(embedding_dimension, number_of_hidden_layers, hidden_layer_dimension, 
   train_losses = []
   train_accuracies = []
   validation_accuracies = []
+
+  #Dynamically select model
   if use_rnn:
     print("Using Seq2Vec...")
     RNN_layer = nn.RNN
@@ -77,6 +79,7 @@ def train(embedding_dimension, number_of_hidden_layers, hidden_layer_dimension, 
     train_accuracies.append(evaluate(model, X_train, y_train))
     validation_accuracies.append(evaluate(model, X_validation, y_validation))
 
+  #Printing train, validation, and test accuracies, of the best achieved.
   train_accuracy = train_accuracies[len(train_accuracies)-1]
   validation_accuracy = validation_accuracies[len(validation_accuracies)-1]
   test_accuracy = evaluate(model, X_test, y_test)

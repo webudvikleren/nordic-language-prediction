@@ -15,7 +15,7 @@ MATHIAS GAMMELGAARD(PGW622)
 JONATHAN CHRISTIANSEN (DVG554)
 '''
 
-#Task 5.1
+#Task 2.1
 print("Running Task 5.1...")
 print("")
 embedding_dim = random.randint(5, 20)
@@ -32,7 +32,7 @@ train(**{
   "learning_rate": 0.01
 })
 
-# Task 5.2
+# Task 2.2
 # Fidning the best params out of 15 combinations
 print("Finding the best params out of 15 combinations...")
 print("")
@@ -52,7 +52,7 @@ plt.xlabel('number of hyperparameter combinations')
 plt.plot(np.arange(1, 16), best_models)
 plt.show()
 
-#Task 5.3
+#Task 2.3
 # Finding training- and validation accuracies pr. epoch for the model with best params..
 print("Finding training- and validation accuracies pr. epoch for the model with best params...")
 print("")
@@ -69,11 +69,11 @@ plt.ylabel('')
 plt.legend()
 plt.show()
 
-#4
+#Task 2.4
 best_params["use_rnn"] = True
 train(**best_params)
 
-#5
+#Task 2.5
 best_params["use_LSTM"] = True
 train(**best_params)
 

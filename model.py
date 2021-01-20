@@ -12,6 +12,7 @@ class CBOW(nn.Module):
     self.embeddings = nn.Embedding(vocab_size, embedding_dim)
     self.number_of_hidden_layers = number_of_hidden_layers
 
+    #Dynamically set hidden layers, with given activation function
     for i in range(1,number_of_hidden_layers+1):
       if i == 1:
         setattr(self, f"linear{i}", nn.Linear(embedding_dim, hidden_dim) )
@@ -29,6 +30,8 @@ class CBOW(nn.Module):
       dtype=torch.long
     )
     embeds = sum(self.embeddings(indices)).view(1,-1)
+
+    #Dynamically calculating predictions
     out = None
     for i in range(1, self.number_of_hidden_layers + 1):
       if i == 1:
