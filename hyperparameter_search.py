@@ -33,7 +33,7 @@ def hyperparameter_search( number_of_combinations ):
 
     f = open("hyperparameters_data.txt", "a")
     try:
-      train_accuracy, validation_accuracy, test_accuracy = train(**params)
+      train_accuracy, validation_accuracy, test_accuracy, train_accuracies, validation_accuracies = train(**params)
       print("")
       params_results.append(( params, validation_accuracy ))
 
