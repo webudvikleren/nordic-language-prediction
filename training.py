@@ -57,8 +57,15 @@ def train(embedding_dimension, number_of_hidden_layers, hidden_layer_dimension, 
     train_accuracies.append(evaluate(cbow, X_train, y_train))
     validation_accuracies.append(evaluate(cbow, X_validation, y_validation))
 
-  print(f"Training accuracy: {evaluate(cbow, X_train, y_train)}")
-  print(f"Validation accuracy: {evaluate(cbow, X_validation, y_validation)}")
-  print(f"Test accuracy: {evaluate(cbow, X_test, y_test)}")
+  train_accuracy = train_accuracies[len(train_accuracies)-1]
+  validation_accuracy = validation_accuracies[len(validation_accuracies)-1]
+  test_accuracy = evaluate(cbow, X_test, y_test)
 
-  return evaluate(cbow, X_validation, y_validation)
+  print(f"Training accuracy: {train_accuracy}")
+  print(f"Validation accuracy: {validation_accuracy}")
+  print(f"Test accuracy: {test_accuracy}")
+  print("")
+  print(f"Training accuracies: {train_accuracies}")
+  print(f"Validation accuracies: {validation_accuracies}")
+
+  return train_accuracy, validation_accuracy, test_accuracy

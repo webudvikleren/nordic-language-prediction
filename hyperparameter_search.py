@@ -4,14 +4,14 @@ from numpy.random import choice
 from training import train
 
 def hyperparameter_search( number_of_combinations ):
-  embedding_dimension = [ 2, 16, 64, 128 ]
-  number_of_hidden_layers = [ 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 ]
-  hidden_layer_dimension = [ 2, 16, 64, 128 ]
+  embedding_dimension = [ 32, 64 ]
+  number_of_hidden_layers = [ 5, 10 ]
+  hidden_layer_dimension = [ 32, 64 ]
   activation_function = [ nn.ReLU, nn.Sigmoid, nn.Tanh ]
   number_of_training_epochs = [ 5, 10, 20 ]
-  loss_function_choice = [ nn.NLLLoss, nn.L1Loss, nn.CrossEntropyLoss, nn.MSELoss ]
+  loss_function_choice = [ nn.NLLLoss, nn.L1Loss, nn.CrossEntropyLoss ]
   optimizer_choice = [ optim.SGD, optim.Adam ]
-  learning_rate = [ 0.001, 0.01, 0.1, 1 ]
+  learning_rate = [ 0.001, 0.01 ]
 
   params_results = []
 
@@ -30,11 +30,25 @@ def hyperparameter_search( number_of_combinations ):
     }
     print("Searching with following params:s")
     print(params)
-    validation_accuracy = train(**params)
-    print("")
-    params_results.append(( params, validation_accuracy ))
 
-  params_results.sort(key=lambda x: x[1])
+    f = open("hyperparameters_data.txt", "a")
+    try:
+      train_accuracy, validation_accuracy, test_accuracy = train(**params)
+      print("")
+      params_results.append(( params, validation_accuracy ))
+
+      f.write(f"Params: {params}\n")
+      f.write(f"Train accuracy: {train_accuracy}\n")
+      f.write(f"Validation accuracy: {validation_accuracy}\n")
+      f.write(f"Test accuracy: {test_accuracy}\n")
+      f.write("\n")
+    except Exception as e:
+      f.write(f"Exception with params: {params}\n")
+      f.write(f"{e}")
+      f.write("\n")
+    f.close()    
+
+  params_results.sort(key=lambda x: x[1], reverse=True)
   print("Best found params:")
   print(params_results[0][0])
   print("")
